@@ -1,10 +1,15 @@
-import logo from "./logo.svg";
+import logo from "./images/logo.png";
 import "./App.css";
 import Header from "./MyComponents/Header";
 function App() {
+  const phoneNumbers = [
+    { number: "123-456-7890", city: "Lahore" },
+    { number: "987-654-3210", city: "Islamabad" },
+    { number: "555-555-5555", city: "Karachi" },
+  ];
   return (
     <>
-      <Header />
+      <Header logo={logo} phoneNumbers={phoneNumbers} />
     </>
   );
 }
