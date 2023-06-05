@@ -1,6 +1,8 @@
 import logo from "./images/logo.png";
+import image from "./images/main.jpg";
 import "./App.css";
 import Header from "./MyComponents/Header";
+import Body from "./MyComponents/Body";
 function App() {
   const phoneNumbers = [
     { number: "123-456-7890", city: "Lahore" },
@@ -10,6 +12,7 @@ function App() {
   return (
     <>
       <Header logo={logo} phoneNumbers={phoneNumbers} />
+      <Body image={image} />
     </>
   );
 }

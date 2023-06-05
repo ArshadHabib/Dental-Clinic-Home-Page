@@ -1,0 +1,8 @@
+.card1-color {
+  background-color: #f16428 !important;
+}
+.custom-column {
+  border: none; /* Remove the border */
+  box-shadow: none;
+  border-color: transparent;
+}
