@@ -55,13 +55,17 @@ const Header = ({ logo, phoneNumbers }) => {
     setSpecialOffersOpen(false);
     setPatientResourcesOpen(false);
   };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
   return (
     <header>
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="navbar navbar-expand-lg navbar-light bg-light">
-              <a className="navbar-brand" href="#">
+              <a className="navbar-brand" href="/" onClick={handleClick}>
                 <img src={logo} alt="Logo" className="logo" />
               </a>
 
@@ -72,7 +76,9 @@ const Header = ({ logo, phoneNumbers }) => {
                       <div key={index} className="mr-3">
                         <div className="d-flex m-3">
                           <div className="icon m-3">
-                            <i className="fa fa-map-marker"></i>
+                            <div className="circle">
+                              <i className="fa fa-map-marker custom-icon-color"></i>
+                            </div>
                           </div>
                           <div className="ml-2">
                             {phoneNumber.number}
@@ -96,7 +102,7 @@ const Header = ({ logo, phoneNumbers }) => {
               <div className="collapse navbar-collapse">
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a className="nav-link" href="/" onClick={handleClick}>
                       HOME
                     </a>
                   </li>
@@ -109,11 +115,12 @@ const Header = ({ logo, phoneNumbers }) => {
                   >
                     <a
                       className="nav-link"
-                      href="#"
+                      href="/"
                       role="button"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded={isAboutUsOpen ? "true" : "false"}
+                      onClick={handleClick}
                     >
                       ABOUT US
                     </a>
@@ -124,10 +131,18 @@ const Header = ({ logo, phoneNumbers }) => {
                       onMouseLeave={handleDropdownClose}
                       aria-labelledby="navbarDropdown"
                     >
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         OUR TEAM
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         OUR DENTIST
                       </a>
                     </div>
@@ -141,11 +156,12 @@ const Header = ({ logo, phoneNumbers }) => {
                   >
                     <a
                       className="nav-link"
-                      href="#"
+                      href="/"
                       role="button"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded={isServicesOpen ? "true" : "false"}
+                      onClick={handleClick}
                     >
                       SERVICES
                     </a>
@@ -156,67 +172,143 @@ const Header = ({ logo, phoneNumbers }) => {
                       onMouseLeave={handleDropdownClose}
                       aria-labelledby="navbarDropdown"
                     >
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         GENERAL DENTISTRY
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         CLEANING AND PREVENTION
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         ORTHODONTICS
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         INVISALIGN® CLEAR TEETH STRAIGHTENING
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         IV CONSCIOUS SEDATION
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         COSMETIC DENTISTRY
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         COSMETIC DENTISTRY
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         PORCELAIN VENEERS
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         TEETH WHITENING
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         TEETH REPLACEMENT
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         IMPLANT DENTISTRY
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         NEW TEETH IN ONE DAY
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         FULL-MOUTH REHABILITATION
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         RESTORATIVE DENTISTRY
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         PORCELAIN CROWNS (CAPS)
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         PORCELAIN FIXED BRIDGES
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         DENTURES & PARTIAL DENTURES
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         WISDOM TEETH EXTRACTIONS
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         ROOT CANAL THERAPY
                       </a>
                     </div>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a className="nav-link" href="/" onClick={handleClick}>
                       TESTIMONIALS
                     </a>
                   </li>
@@ -229,11 +321,12 @@ const Header = ({ logo, phoneNumbers }) => {
                   >
                     <a
                       className="nav-link"
-                      href="#"
+                      href="/"
                       role="button"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded={isDentalOfficesOpen ? "true" : "false"}
+                      onClick={handleClick}
                     >
                       DENTAL OFFICES
                     </a>
@@ -244,13 +337,25 @@ const Header = ({ logo, phoneNumbers }) => {
                       onMouseLeave={handleDropdownClose}
                       aria-labelledby="navbarDropdown"
                     >
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         WHITTIER
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         LAKE FOREST
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         SAN CLEMENTE
                       </a>
                     </div>
@@ -264,11 +369,12 @@ const Header = ({ logo, phoneNumbers }) => {
                   >
                     <a
                       className="nav-link"
-                      href="#"
+                      href="/"
                       role="button"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded={isSpecialOffersOpen ? "true" : "false"}
+                      onClick={handleClick}
                     >
                       SPECIAL OFFERS
                     </a>
@@ -279,16 +385,32 @@ const Header = ({ logo, phoneNumbers }) => {
                       onMouseLeave={handleDropdownClose}
                       aria-labelledby="navbarDropdown"
                     >
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         WHITTIER
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         LAKE FOREST
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         SAN CLEMENTE
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         ALL OFFERS
                       </a>
                     </div>
@@ -302,11 +424,12 @@ const Header = ({ logo, phoneNumbers }) => {
                   >
                     <a
                       className="nav-link"
-                      href="#"
+                      href="/"
                       role="button"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded={isPatientResourcesOpen ? "true" : "false"}
+                      onClick={handleClick}
                     >
                       PATIENT RESOURCES
                     </a>
@@ -317,22 +440,38 @@ const Header = ({ logo, phoneNumbers }) => {
                       onMouseLeave={handleDropdownClose}
                       aria-labelledby="navbarDropdown"
                     >
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         PATIENT FORMS
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         INSURANCE OPTIONS
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         PAYMENT OPTIONS
                       </a>
-                      <a className="nav-link dropdown-item bg-orange" href="#">
+                      <a
+                        className="nav-link dropdown-item bg-orange"
+                        href="/"
+                        onClick={handleClick}
+                      >
                         REVIEW US
                       </a>
                     </div>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a href="/" className="nav-link" onClick={handleClick}>
                       CONTACT US
                     </a>
                   </li>

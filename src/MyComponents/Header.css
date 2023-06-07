@@ -9,3 +9,16 @@
 .nav-link:hover {
   color: yellow !important;
 }
+.custom-icon-color {
+  color: #f16428;
+}
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid #000;
+  background-color: transparent;
+}

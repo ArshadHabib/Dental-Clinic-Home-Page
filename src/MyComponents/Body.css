@@ -6,3 +6,14 @@
   box-shadow: none;
   border-color: transparent;
 }
+.fixed-size-image {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+.bg-grey {
+  background-color: #dfdede !important;
+}
+.custom-border {
+  border: 2px dotted #000;
+}

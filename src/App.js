@@ -1,5 +1,8 @@
-import logo from "./images/logo.png";
-import image from "./images/main.jpg";
+import logo from "./images/logo.jpg";
+import image1 from "./images/image1.jpg";
+import image2 from "./images/image2.jpg";
+import image3 from "./images/image3.jpg";
+import image4 from "./images/image4.jpg";
 import "./App.css";
 import Header from "./MyComponents/Header";
 import Body from "./MyComponents/Body";
@@ -12,7 +15,7 @@ function App() {
   return (
     <>
       <Header logo={logo} phoneNumbers={phoneNumbers} />
-      <Body image={image} />
+      <Body images={[image1, image2, image3, image4]} />
     </>
   );
 }
